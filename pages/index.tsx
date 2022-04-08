@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 const Home: NextPage = () => {
-  const handleClick = (event: SyntheticBaseEvent) => {
+  const handleClick = (event: any) => {
     event.preventDefault()
     console.log("allo")
   }
