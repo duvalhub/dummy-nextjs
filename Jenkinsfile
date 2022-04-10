@@ -1,5 +1,5 @@
 @Library([
-    'continuous-deployment-library@master',
+    'continuous-deployment-library@fix/nextjs-missing-requires-files',
     'shared-library@master'
 ]) _
 
