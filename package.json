@@ -1,25 +1,26 @@
 {
-  "name": "dummy-nextjs",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "12.1.4",
-    "next-http-proxy-middleware": "^1.2.4",
-    "react": "18.0.0",
-    "react-dom": "18.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "17.0.23",
-    "@types/react": "18.0.0",
-    "@types/react-dom": "18.0.0",
-    "eslint": "8.13.0",
-    "eslint-config-next": "12.1.4",
-    "typescript": "4.6.3"
-  }
+    "name": "dummy-nextjs",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build && cp -rp public .next/standalone/public && cp -rp .next/static .next/standalone/.next/static",
+        "start": "next start",
+        "export": "next export",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "next": "12.1.4",
+        "next-http-proxy-middleware": "^1.2.4",
+        "react": "18.0.0",
+        "react-dom": "18.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "17.0.23",
+        "@types/react": "18.0.0",
+        "@types/react-dom": "18.0.0",
+        "eslint": "8.13.0",
+        "eslint-config-next": "12.1.4",
+        "typescript": "4.6.3"
+    }
 }
