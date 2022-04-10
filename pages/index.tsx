@@ -17,6 +17,8 @@ const Home: NextPage = () => {
 
       <button onClick={handleClick}>click me</button>
 
+      <Image src="/pexels-photo-9542697.jpeg" alt='' width='500' height='750' />
+
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>

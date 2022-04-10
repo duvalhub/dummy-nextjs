@@ -1,7 +1,6 @@
 @Library([
     'continuous-deployment-library@master',
-    'shared-library@improvement/create-nextjs-template'
+    'shared-library@master'
 ]) _
-
 
 continuousDeployment()
