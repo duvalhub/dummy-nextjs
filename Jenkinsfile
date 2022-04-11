@@ -1,6 +1,6 @@
 @Library([
-    'continuous-deployment-library@fix/nextjs-missing-requires-files',
-    'shared-library@master'
+    'continuous-deployment-library@master',
+    'shared-library@fix/nextjs-missing-requires-files'
 ]) _
 
 continuousDeployment()
