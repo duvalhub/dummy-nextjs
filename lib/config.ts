@@ -1,25 +1,18 @@
+import { load } from 'cloud-config-client'
 
-type ConfigClient = {
-    get(key: string): any
-}
-
-let config_client: ConfigClient
-
-try {
-    connect()
-} catch (e) {
-    console.error(e)
-}
-
-function connect() {
-    const configs: { [key: string]: any } = {
-        'backend.url': 'https://www.example.com'
+const config = load({
+    name: process.env.APPLICATION_NAME || "",
+    profiles: process.env.APPLICATION_PROFILES,
+    label: process.env.CONFIG_LABEL?.replace("/", "(_)"),
+    endpoint: process.env.CONFIG_URL,
+    auth: {
+        user: process.env.CONFIG_USERNAME || '',
+        pass: process.env.CONFIG_PASSWORD || '',
     }
-    config_client = {
-        get: (key) => configs[key]
-    }
-}
+}).then((c: any) => c.toObject())
+    .catch(err => {
+        console.error("Failed to fetch configuration due to ", err)
+        throw err
+    })
 
-export function getConfig(key: string): any {
-    return config_client.get(key)
-}
+export default config
