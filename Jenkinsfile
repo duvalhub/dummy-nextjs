@@ -1,6 +1,6 @@
 @Library([
     'continuous-deployment-library@master',
-    'shared-library@fix/nextjs-missing-requires-files'
+    'shared-library@improvement/allow-inject-properties-during-build'
 ]) _
 
 continuousDeployment()

@@ -2,6 +2,23 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+
+
+export async function getStaticProps() {
+  const customConf = process.env.MY_CUSTOM_CONF
+  if (!customConf) {
+    throw new Error('We are missing customConf')
+  }
+  return {
+    props: {
+      customConf,
+    },
+    revalidate: 60
+  }
+}
+
+
+
 const Home: NextPage = () => {
   const handleClick = (event: any) => {
     event.preventDefault()
