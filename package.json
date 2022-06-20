@@ -4,10 +4,9 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build": "jest && next build && rm -rf build && mkdir -p build && mv .next build/.next && cp -rp public build/public && cp next.config.js build/next.config.js",
+        "build": "next build && rm -rf build && mkdir -p build && mv .next build/.next && cp -rp public build/public && cp next.config.js build/next.config.js",
         "start": "next start build",
         "export": "next export",
-        "test": "jest --watch",
         "lint": "next lint"
     },
     "dependencies": {
