@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build": "next build && rm -rf build && mkdir -p build && mv .next build/.next && cp -rp public build/public && cp next.config.js build/next.config.js",
+        "build": "npm run test && next build && rm -rf build && mkdir -p build && mv .next build/.next && cp -rp public build/public && cp next.config.js build/next.config.js",
         "start": "next start build",
         "export": "next export",
         "lint": "next lint"
