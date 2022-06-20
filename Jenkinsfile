@@ -1,6 +1,6 @@
 @Library([
     'continuous-deployment-library@master',
-    'shared-library@improvement/allow-inject-properties-during-build'
+    'shared-library@fix/docker-commands-with-explicite-context'
 ]) _
 
 continuousDeployment()
