@@ -1,6 +1,6 @@
 @Library([
     'continuous-deployment-library@master',
-    'shared-library@fix/docker-commands-with-explicite-context'
+    'shared-library@fix/management-docker-context-and-ssh-config-for-multiple-builds'
 ]) _
 
 continuousDeployment()
